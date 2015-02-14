@@ -96,4 +96,10 @@
   window.addEventListener('push', push);
   window.addEventListener('DOMContentLoaded', push);
 
+  // Stolen from:
+  //  http://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device-in-jquery
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    alert('Please view this in a mobile browser, not your desktop one.');
+  }
+
 }());
