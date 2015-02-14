@@ -3,3 +3,11 @@ html .slider {
 	width: 100%;
 	height: 100%;
 }
+
+.image-icon img {
+	float: left;
+}
+
+.image-icon {
+	text-align: center;
+}
