@@ -18,3 +18,7 @@ html .slider {
 .info {
 	margin-top: 20px;
 }
+
+.checklist-other-btn {
+  right: 50px !important;
+}

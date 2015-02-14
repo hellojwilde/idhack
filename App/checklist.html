@@ -11,23 +11,61 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- our style sheet -->
-    <link href="style.css" rel="stylesheet">
-
     <!-- Include the compiled Ratchet CSS -->
     <link href="ratchet-v2.0.2/css/ratchet.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
     <script src="ratchet-v2.0.2/js/ratchet.js"></script>
+
+    <!-- our style sheet -->
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-<ul class="table-view">
-  <li class="table-view-cell">Item 2 <button class="btn btn-positive btn-outlined">  <span class="icon icon-check"></span></button><button class="btn btn-negative btn-outlined"> <span class="icon icon-close"></span></button></li>
- <li class="table-view-cell">Item 2 <button class="btn btn-positive btn-outlined">  <span class="icon icon-check"></span></button><button class="btn btn-negative btn-outlined"> <span class="icon icon-close"></span></button></li>
- <li class="table-view-cell">Item 3 <button class="btn btn-positive btn-outlined">  <span class="icon icon-check"></span></button><button class="btn btn-negative btn-outlined"> <span class="icon icon-close"></span></button></li>
- <li class="table-view-cell">Item 4 <button class="btn btn-positive btn-outlined">  <span class="icon icon-check"></span></button><button class="btn btn-negative btn-outlined"> <span class="icon icon-close"></span></button></li>
-</ul>
+        <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <a href="mother.html" class="icon icon-left-nav pull-left"></a>
+      <h1 class="title">Checklist</h1>
+    </header>
 
-   
+    <div class="content">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          Item 2 
+          <button class="btn btn-positive btn-outlined checklist-other-btn">  
+            <span class="icon icon-check"></span>
+          </button>
+          <button class="btn btn-negative btn-outlined"> 
+            <span class="icon icon-close"></span>
+          </button>
+        </li>
+        <li class="table-view-cell">
+          Item 2 
+          <button class="btn btn-positive btn-outlined checklist-other-btn">
+            <span class="icon icon-check"></span>
+          </button>
+          <button class="btn btn-negative btn-outlined"> 
+            <span class="icon icon-close"></span>
+          </button>
+        </li>
+        <li class="table-view-cell">
+          Item 3
+          <button class="btn btn-positive btn-outlined checklist-other-btn"> 
+            <span class="icon icon-check"></span>
+          </button>
+          <button class="btn btn-negative btn-outlined">
+            <span class="icon icon-close"></span>
+          </button>
+        </li>
+        <li class="table-view-cell">
+          Item 4
+          <button class="btn btn-positive btn-outlined checklist-other-btn">
+            <span class="icon icon-check"></span>
+          </button>
+          <button class="btn btn-negative btn-outlined">
+            <span class="icon icon-close"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
