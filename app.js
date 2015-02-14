@@ -23,16 +23,10 @@
     if (indexMediaStream && canvas) {
       var ctx = canvas.getContext('2d');
 
-      canvas.style.width = video.clientWidth + "px";
-      canvas.style.height = video.clientHeight + "px";
+      canvas.width = video.clientWidth;
+      canvas.height = video.clientHeight;
 
-      ctx.drawImage(
-        video,
-        0, 
-        0, 
-        video.clientWidth, 
-        video.clientHeight
-      );
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
 
     document.getElementById('myModalexample').classList.remove('active');
@@ -44,8 +38,8 @@
     var take = document.getElementById('snapshot-take')
     var childMediaStream = null;
 
-    canvas.style.width = video.clientWidth + "px";
-    canvas.style.height = video.clientHeight + "px";
+    canvas.width = video.clientWidth;
+    canvas.height = video.clientHeight;
     canvas.style.display = "none";
 
     navigator.getUserMedia({video:true}, function(stream) {
@@ -54,13 +48,9 @@
     }, function() {});
 
     take.addEventListener('click', function() {
-      canvas.getContext('2d').drawImage(
-        video,
-        0, 
-        0, 
-        video.clientWidth, 
-        video.clientHeight
-      );
+      canvas
+        .getContext('2d')
+        .drawImage(video, 0, 0, canvas.width, canvas.height);
 
       canvas.style.display = "block";
       video.style.display = "none";
