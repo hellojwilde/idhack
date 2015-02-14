@@ -19,8 +19,11 @@ html .slider {
 	margin-top: 20px;
 }
 
-.checklist-other-btn {
+.right-btn {
   right: 50px !important;
+}
+.left-btn {
+  right: 0px;
 }
 
 .check-up {
