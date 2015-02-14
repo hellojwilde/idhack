@@ -67,6 +67,19 @@
     });
   }
 
+  function pushChecklist() {
+    // sets the contents to take up the entire width/height of the page
+
+    $(".right-btn").click(function() {
+        $(this).toggleClass("btn-outlined");
+                  $(this).parent().find(".left-btn").addClass("btn-outlined");
+        });
+         $(".left-btn").click(function() {
+        $(this).toggleClass("btn-outlined");
+                  $(this).parent().find(".right-btn").addClass("btn-outlined");
+            });
+  }
+
   function push() {
     var wrappers = document.querySelector('[page]');
     var page = wrappers && wrappers.getAttribute('page');
@@ -80,6 +93,9 @@
         break;
       case 'addChild':
         pushAddChild();
+        break;
+      case 'checklist':
+        pushChecklist();
         break;
     }
   }
