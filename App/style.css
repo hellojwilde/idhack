@@ -5,9 +5,16 @@ html .slider {
 }
 
 .image-icon img {
+	margin-top: -25px;
 	float: left;
 }
 
 .image-icon {
+	margin-top: 25px;
 	text-align: center;
+	font-size: 25px;
+}
+
+.info {
+	margin-top: 20px;
 }
