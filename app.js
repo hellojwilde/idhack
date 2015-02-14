@@ -16,6 +16,10 @@
     }, function() {});
   }
 
+  function pushMother() {
+    document.getElementById('myModalexample').classList.remove('active');
+  }
+
   function pushAddMother() {
     var video = document.getElementById("snapshot");
     var canvas = document.getElementById("snapshot-still");
@@ -73,6 +77,9 @@
     switch (page) {
       case 'index':
         pushIndex();
+        break;
+      case 'mother':
+        pushMother();
         break;
       case 'addMother':
         pushAddMother();
