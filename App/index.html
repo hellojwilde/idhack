@@ -68,14 +68,20 @@
     <div id="myModalexample" class="modal">
       <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="#myModalexample"></a>
-        <h1 class="title">Add/Open Patient</h1>
+        <h1 class="title">Search by Photo</h1>
       </header>
 
       <div class="content">
-        <video id="snapshot" width="100%" autoplay/>
+        <video id="snapshot" width="100%" autoplay></video>
+        <div id="search">
+          <a class="btn btn-primary btn-block" data-transition="slide-in" href="mother.html">Search</a>
+        </div>
       </div>
 
       <script>
+        // Based on: <http://blog.teamtreehouse.com/
+        //            accessing-the-device-camera-with-getusermedia>
+
         navigator.getUserMedia = (
           navigator.getUserMedia || 
           navigator.webkitGetUserMedia
@@ -85,6 +91,10 @@
           var video = document.getElementById("snapshot");
           video.src = window.URL.createObjectURL(localMediaStream);
         }, function() {});
+
+        window.addEventListener('push', function() {
+          document.getElementById('myModalexample').classList.remove('active');
+        });
       </script>
     </div>
 
