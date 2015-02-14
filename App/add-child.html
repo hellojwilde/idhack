@@ -25,18 +25,19 @@
     <header class="bar bar-nav">
       <a href="index.html" class="icon icon-home pull-left"></a>
       <a href="mother.html" class="icon icon-check pull-right"></a>
-      <h1 class="title">Add Mother</h1>
+      <h1 class="title">Add Child</h1>
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content" page="addMother">
+    <div class="content" page="addChild">
+      <video id="snapshot" width="100%" autoplay></video>
+      <canvas id="snapshot-still"></canvas>
+
       <div class="content-padded">
-        <p>No results found. Add a new mother profile.</p>
-      </div>
+          <a class="btn btn-primary btn-block" id="snapshot-take">Take Photo</a>
+        </div>
 
       <form class="input-group">
-        <canvas id="snapshot-still"></canvas>
-
         <div class="input-row">
           <label>Full Name</label>
           <input type="text"/>

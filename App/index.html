@@ -16,6 +16,8 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="ratchet-v2.0.2/js/ratchet.js"></script>
+
+    <script src="video.js"></script>
   </head>
   <body>
 
@@ -27,7 +29,7 @@
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
+    <div class="content" page="index">
       <ul class="table-view">
         <li class="table-view-divider">Today</li>
 
@@ -78,37 +80,6 @@
           <a class="btn btn-primary btn-block" data-transition="slide-in" href="add-mother.html">Search</a>
         </div>
       </div>
-
-      <script>
-        // Based on: <http://blog.teamtreehouse.com/
-        //            accessing-the-device-camera-with-getusermedia>
-
-        var video = document.getElementById("snapshot");
-        var localMediaStream = null;
-
-        navigator.getUserMedia = (
-          navigator.getUserMedia || 
-          navigator.webkitGetUserMedia
-        );
-
-        navigator.getUserMedia({video:true}, function(stream) {
-          video.src = window.URL.createObjectURL(stream);
-          localMediaStream = stream;
-        }, function() {});
-
-        window.addEventListener('push', function() {
-          var canvas = document.getElementById("snapshot-still");
-
-          if (localMediaStream && canvas) {
-            var ctx = canvas.getContext('2d');
-            canvas.style.width = video.clientWidth + "px";
-            canvas.style.height = video.clientHeight + "px";
-            ctx.drawImage(video, 0, 0, video.clientWidth, video.clientHeight);
-          }
-
-          document.getElementById('myModalexample').classList.remove('active');
-        });
-      </script>
     </div>
 
   </body>
