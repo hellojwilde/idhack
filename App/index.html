@@ -68,17 +68,25 @@
     <div id="myModalexample" class="modal">
       <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="#myModalexample"></a>
-        <h1 class="title">Load Patient</h1>
+        <h1 class="title">Add/Open Patient</h1>
       </header>
 
       <div class="content">
-
+        <video id="snapshot" width="100%" autoplay/>
       </div>
+
+      <script>
+        navigator.getUserMedia = (
+          navigator.getUserMedia || 
+          navigator.webkitGetUserMedia
+        );
+
+        navigator.getUserMedia({video:true}, function(localMediaStream) {
+          var video = document.getElementById("snapshot");
+          video.src = window.URL.createObjectURL(localMediaStream);
+        }, function() {});
+      </script>
     </div>
-
-    <script>
-
-    </script>
 
   </body>
 </html>
