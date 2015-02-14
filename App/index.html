@@ -21,7 +21,7 @@
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
-      <a class="icon icon-person pull-left"></a>
+      <a class="icon icon-person pull-left" href="#myModalexample"></a>
       <a class="icon icon-search pull-right"></a>
       <h1 class="title">Dashboard</h1>
     </header>
@@ -32,7 +32,7 @@
         <li class="table-view-divider">Today</li>
 
         <li class="table-view-cell media">
-          <a class="navigate-right">
+          <a class="navigate-right" data-transition="slide-in" href="mother.html">
             <img class="media-object pull-left" src="http://placehold.it/42x42">
             <div class="media-body">
               Mother's Name
@@ -64,6 +64,21 @@
         </li>
       </ul>
     </div>
+
+    <div id="myModalexample" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#myModalexample"></a>
+        <h1 class="title">Load Patient</h1>
+      </header>
+
+      <div class="content">
+
+      </div>
+    </div>
+
+    <script>
+
+    </script>
 
   </body>
 </html>
