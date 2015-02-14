@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="ratchet-v2.0.2/css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="ratchet-v2.0.2/js/ratchet.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <a class="icon icon-person pull-left" href="#myModalexample"></a>
+      <a class="icon icon-search pull-right"></a>
+      <h1 class="title">Dashboard</h1>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content" page="index">
+      <ul class="table-view">
+        <li class="table-view-divider">Today</li>
+
+        <li class="table-view-cell media">
+          <a class="navigate-right" data-transition="slide-in" href="mother.html">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              Joe Doe
+              <p>Next visit: 14 February 2015</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              Ankita Chavan
+              <p>Next visit: 14 February 2015</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="table-view-divider">Tomorrow</li>
+
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              Divya Pillai
+              <p>Next visit: 15 February 2015</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="myModalexample" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#myModalexample"></a>
+        <h1 class="title">Search by Photo</h1>
+      </header>
+
+      <div class="content">
+        <video id="snapshot" width="100%" autoplay></video>
+
+        <div class="content-padded">
+          <a class="btn btn-primary btn-block" data-transition="slide-in" href="add-mother.html">Search</a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
