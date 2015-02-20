@@ -6,7 +6,7 @@ var server = new Hapi.Server();
 server.connection({port: 3000});
 
 // POST /api/face -> returns profile ID if it exists
-// POST /api/profile/ -> create new profile with specified face
+// POST /api/profile -> create new profile with specified face
 
 server.route([
   {
