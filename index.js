@@ -1,26 +1,36 @@
 var Hapi = require('hapi');
-var OpenCV = require('opencv');
+var CV = require('opencv');
+var FS = require('fs');
 
 var server = new Hapi.Server();
+var recognizer = new CV.FaceRecognizer();
 
 server.connection({port: 3000});
-
-// POST /api/face -> returns profile ID if it exists
-// POST /api/profile -> create new profile with specified face
 
 server.route([
   {
     method: 'POST',
     path: '/api/face',
-    handler: {
+    handler: function(request, reply) {
+      var photo = request.payload.photo;
+      var prediction = recognizer.predictSync(photo.path);
 
+      FS.unlink(photo.path, function(err) {
+        return reply(prediction);
+      });
     }
   },
   {
     method: 'POST',
-    path: '/api/profile',
+    path: '/api/profile/{id}/face',
     handler: {
+      var photo = request.payload.photo;
+      var id = request.params.id;
 
+      recognizer.updateSync([[id, photo]]);
+      FS.unlink(photo.path, function(err) {
+        return reply({updated: id});
+      });
     }
   }
 ]);
