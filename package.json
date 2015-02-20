@@ -12,6 +12,7 @@
   "dependencies": {
     "bluebird": "^2.9.12",
     "hapi": "^8.2.0",
+    "opencv": "^3.0.0",
     "redis": "^0.12.1"
   }
 }

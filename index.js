@@ -23,7 +23,7 @@ server.route([
   {
     method: 'POST',
     path: '/api/profile/{id}/face',
-    handler: {
+    handler: function(request, reply) {
       var photo = request.payload.photo;
       var id = request.params.id;
 
